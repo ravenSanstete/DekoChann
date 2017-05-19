@@ -1,17 +1,17 @@
 targets = main
 
-objects = main.o matrix.o
+objects = main.o tensor.o hub.o
 
 CC=gcc
 CFLAGS=-g
 
-main: main.o matrix.o
+main: main.o tensor.o hub.o
 
-main.o: main.c matrix.h
+main.o: main.c tensor.h
 
-matrix.o: matrix.c matrix.h
+tensor.o: tensor.c tensor.h hub.h
 
-
+hub.o: hub.c hub.h
 
 
 
