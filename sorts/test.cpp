@@ -37,6 +37,7 @@ int main(){
 
   sort(dat, test_num, INSERTION, buf);
 
+
   if(buf==nullptr){
       assert_incr_order(dat, test_num);
   }else{
