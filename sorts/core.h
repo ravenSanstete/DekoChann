@@ -1,7 +1,8 @@
 
 
 enum SORT_METHOD{
-  INSERTION=1
+  INSERTION=1,
+  HEAP=2
 };
 
 

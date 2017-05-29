@@ -1,18 +1,16 @@
 targets = test
 
-objects = heap.o
+objects = heap.o test.o *.gch
 
 CC=g++
-CFLAGS=-g
+CXXFLAGS=$(COMPILERFLAGS) -g $(INCDIRS)
 
 test: test.o heap.o
 
 test.o: test.cpp heap.h
-	$(CC) -c test.cpp heap.h $(CFLAGS)
 
 heap.o: heap.cpp heap.h
-	$(CC) -c heap.cpp heap.h $(CFLAGS)
 
 
 clean :
-				rm $(targets) $(objects)
+				rm -f $(targets) $(objects)

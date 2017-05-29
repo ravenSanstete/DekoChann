@@ -1,16 +1,20 @@
 targets = test
 
-objects = test.o core.o
+objects = test.o core.o $(DSPATH)heap.o *.gch
 
 CC=g++
-CFLAGS=-g
+CXXFLAGS=$(COMPILERFLAGS) -g $(INCDIRS)
+DSPATH = ../structures/
 
-test: test.o core.o
+
+
+test: test.o core.o $(DSPATH)heap.o
 
 test.o: test.cpp core.h
 
-core.o: core.cpp core.h
+core.o: core.cpp core.h $(DSPATH)heap.h
 
+heap.o: $(DSPATH)heap.cpp $(DSPATH)heap.h
 
 clean :
-				rm $(targets) $(objects)
+				rm -f $(targets) $(objects)

@@ -6,6 +6,7 @@
 #include "./core.h"
 
 
+
 #define PATH "/Users/morino/Desktop/DekoChann/sorts/test_data.dat"
 
 
@@ -35,7 +36,7 @@ int main(){
   double* buf= nullptr;
 
 
-  sort(dat, test_num, INSERTION, buf);
+  sort(dat, test_num, HEAP, buf);
 
 
   if(buf==nullptr){

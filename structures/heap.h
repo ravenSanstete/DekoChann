@@ -40,5 +40,9 @@ void build_heap(Heap* heap, enum HEAP_MODE mode, double* data, int size);
 void print_heap(Heap* heap);
 
 
+// the invoker should present a big enough store for buffering the outcome
+void heap_sort(Heap* heap, double* store);
+
+
 
 //

@@ -19,6 +19,22 @@ int main(){
 
  print_heap(heap);
 
+ double * store = (double*)malloc(sizeof(double)*SIZE);
+ heap_sort(heap, store);
+
+
+
+int i=0;
+while(i<SIZE){
+  cout<<store[i]<<" ";
+  i++;
+}
+
+cout<<endl;
+
+free(store);
+ free(heap);
+
   return 0;
 }
 
